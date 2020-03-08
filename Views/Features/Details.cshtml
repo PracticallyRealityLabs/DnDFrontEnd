@@ -1,0 +1,36 @@
+﻿@model DnDFrontEnd.Models.Features
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Features</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aquiredfrom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aquiredfrom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Caharacter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Caharacter.PlayerCharacterid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Featuresid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

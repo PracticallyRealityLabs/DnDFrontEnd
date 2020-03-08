@@ -1,0 +1,51 @@
+﻿@model DnDFrontEnd.Models.Dexterity
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Dexterity</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexsaveprof)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexsaveprof)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexvalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexvalue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Acrobatics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Acrobatics.Acrobaticsid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sleight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sleight.Sleightofhandid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stealth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stealth.Stealthid)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Dexterityid" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

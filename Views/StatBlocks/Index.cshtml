@@ -1,0 +1,101 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.StatBlock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Basehp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passiveperception)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Character)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Charisma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Constitution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dexterity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intelligence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wisdom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Basehp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passiveperception)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Character.PlayerCharacterid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Charisma.Charismaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Constitution.Constitutionid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexterity.Dexterityid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intelligence.Intelligenceid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strength.Strengthid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wisdom.Wisdomid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Statblockid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Statblockid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Statblockid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

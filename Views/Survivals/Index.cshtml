@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Survival>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Survivalprof)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Survivalprof)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Survivalid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Survivalid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Survivalid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

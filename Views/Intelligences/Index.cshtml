@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Intelligence>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Intvalue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intsaveprof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arcana)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Investigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Religion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intvalue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intsaveprof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arcana.Arcanaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.History.Historyid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Investigation.Investigationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nature.Natureid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Religion.Religionid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Intelligenceid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Intelligenceid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Intelligenceid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

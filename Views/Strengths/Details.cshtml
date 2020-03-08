@@ -1,0 +1,36 @@
+﻿@model DnDFrontEnd.Models.Strength
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Strength</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strsaveprof)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Strsaveprof)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strvalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Strvalue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Athletics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Athletics.Athleticsid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Strengthid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

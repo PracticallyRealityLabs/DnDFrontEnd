@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Dexterity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Dexsaveprof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dexvalue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acrobatics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sleight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stealth)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexsaveprof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexvalue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acrobatics.Acrobaticsid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sleight.Sleightofhandid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stealth.Stealthid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Dexterityid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Dexterityid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Dexterityid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

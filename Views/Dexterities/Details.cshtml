@@ -1,0 +1,48 @@
+﻿@model DnDFrontEnd.Models.Dexterity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dexterity</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexsaveprof)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexsaveprof)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexvalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexvalue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Acrobatics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Acrobatics.Acrobaticsid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sleight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sleight.Sleightofhandid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stealth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stealth.Stealthid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Dexterityid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Charisma>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Chasaveprof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chavalue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deception)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intimidation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Performance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Persuasion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chasaveprof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chavalue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deception.Deceptionid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intimidation.Intimidationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Performance.Performanceid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persuasion.Persuasionid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Charismaid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Charismaid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Charismaid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

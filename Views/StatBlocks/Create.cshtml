@@ -1,0 +1,81 @@
+﻿@model DnDFrontEnd.Models.StatBlock
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>StatBlock</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Basehp" class="control-label"></label>
+                <input asp-for="Basehp" class="form-control" />
+                <span asp-validation-for="Basehp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Speed" class="control-label"></label>
+                <input asp-for="Speed" class="form-control" />
+                <span asp-validation-for="Speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level" class="control-label"></label>
+                <input asp-for="Level" class="form-control" />
+                <span asp-validation-for="Level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passiveperception" class="control-label"></label>
+                <input asp-for="Passiveperception" class="form-control" />
+                <span asp-validation-for="Passiveperception" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vision" class="control-label"></label>
+                <input asp-for="Vision" class="form-control" />
+                <span asp-validation-for="Vision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Characterid" class="control-label"></label>
+                <select asp-for="Characterid" class ="form-control" asp-items="ViewBag.Characterid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Strengthid" class="control-label"></label>
+                <select asp-for="Strengthid" class ="form-control" asp-items="ViewBag.Strengthid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dexterityid" class="control-label"></label>
+                <select asp-for="Dexterityid" class ="form-control" asp-items="ViewBag.Dexterityid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Constitutionid" class="control-label"></label>
+                <select asp-for="Constitutionid" class ="form-control" asp-items="ViewBag.Constitutionid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Intelligenceid" class="control-label"></label>
+                <select asp-for="Intelligenceid" class ="form-control" asp-items="ViewBag.Intelligenceid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wisdomid" class="control-label"></label>
+                <select asp-for="Wisdomid" class ="form-control" asp-items="ViewBag.Wisdomid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Charismaid" class="control-label"></label>
+                <select asp-for="Charismaid" class ="form-control" asp-items="ViewBag.Charismaid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

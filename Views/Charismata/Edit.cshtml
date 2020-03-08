@@ -1,0 +1,59 @@
+﻿@model DnDFrontEnd.Models.Charisma
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Charisma</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Charismaid" />
+            <div class="form-group">
+                <label asp-for="Chasaveprof" class="control-label"></label>
+                <input asp-for="Chasaveprof" class="form-control" />
+                <span asp-validation-for="Chasaveprof" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chavalue" class="control-label"></label>
+                <input asp-for="Chavalue" class="form-control" />
+                <span asp-validation-for="Chavalue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persuasionid" class="control-label"></label>
+                <select asp-for="Persuasionid" class="form-control" asp-items="ViewBag.Persuasionid"></select>
+                <span asp-validation-for="Persuasionid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Performanceid" class="control-label"></label>
+                <select asp-for="Performanceid" class="form-control" asp-items="ViewBag.Performanceid"></select>
+                <span asp-validation-for="Performanceid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deceptionid" class="control-label"></label>
+                <select asp-for="Deceptionid" class="form-control" asp-items="ViewBag.Deceptionid"></select>
+                <span asp-validation-for="Deceptionid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Intimidationid" class="control-label"></label>
+                <select asp-for="Intimidationid" class="form-control" asp-items="ViewBag.Intimidationid"></select>
+                <span asp-validation-for="Intimidationid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

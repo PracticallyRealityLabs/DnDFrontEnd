@@ -1,0 +1,39 @@
+﻿@model DnDFrontEnd.Models.Constitution
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Constitution</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Constitutionid" />
+            <div class="form-group">
+                <label asp-for="Consaveprof" class="control-label"></label>
+                <input asp-for="Consaveprof" class="form-control" />
+                <span asp-validation-for="Consaveprof" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Convalue" class="control-label"></label>
+                <input asp-for="Convalue" class="form-control" />
+                <span asp-validation-for="Convalue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

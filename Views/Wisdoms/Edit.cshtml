@@ -1,0 +1,59 @@
+﻿@model DnDFrontEnd.Models.Wisdom
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Wisdom</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Wisdomid" />
+            <div class="form-group">
+                <label asp-for="Wissaveprof" class="control-label"></label>
+                <input asp-for="Wissaveprof" class="form-control" />
+                <span asp-validation-for="Wissaveprof" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wisvalue" class="control-label"></label>
+                <input asp-for="Wisvalue" class="form-control" />
+                <span asp-validation-for="Wisvalue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Animalhandid" class="control-label"></label>
+                <select asp-for="Animalhandid" class="form-control" asp-items="ViewBag.Animalhandid"></select>
+                <span asp-validation-for="Animalhandid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Perceptionid" class="control-label"></label>
+                <select asp-for="Perceptionid" class="form-control" asp-items="ViewBag.Perceptionid"></select>
+                <span asp-validation-for="Perceptionid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insightid" class="control-label"></label>
+                <select asp-for="Insightid" class="form-control" asp-items="ViewBag.Insightid"></select>
+                <span asp-validation-for="Insightid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survivalid" class="control-label"></label>
+                <select asp-for="Survivalid" class="form-control" asp-items="ViewBag.Survivalid"></select>
+                <span asp-validation-for="Survivalid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

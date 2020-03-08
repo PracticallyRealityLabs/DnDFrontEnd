@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Strength>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Strsaveprof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strvalue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Athletics)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strsaveprof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strvalue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Athletics.Athleticsid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Strengthid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Strengthid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Strengthid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

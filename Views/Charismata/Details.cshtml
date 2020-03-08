@@ -1,0 +1,54 @@
+﻿@model DnDFrontEnd.Models.Charisma
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Charisma</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Chasaveprof)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Chasaveprof)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Chavalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Chavalue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Deception)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Deception.Deceptionid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intimidation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intimidation.Intimidationid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Performance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Performance.Performanceid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Persuasion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Persuasion.Persuasionid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Charismaid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

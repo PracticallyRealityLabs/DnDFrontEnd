@@ -1,0 +1,93 @@
+﻿@model DnDFrontEnd.Models.StatBlock
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StatBlock</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Basehp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Basehp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Speed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Passiveperception)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Passiveperception)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vision)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vision)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Character)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Character.PlayerCharacterid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Charisma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Charisma.Charismaid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Constitution)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Constitution.Constitutionid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dexterity.Dexterityid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intelligence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intelligence.Intelligenceid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Strength.Strengthid)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wisdom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wisdom.Wisdomid)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Statblockid" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

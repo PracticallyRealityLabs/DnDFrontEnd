@@ -1,0 +1,60 @@
+﻿@model DnDFrontEnd.Models.Intelligence
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Intelligence</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intvalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intvalue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Intsaveprof)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Intsaveprof)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Arcana)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Arcana.Arcanaid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.History)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.History.Historyid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Investigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Investigation.Investigationid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nature)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nature.Natureid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Religion.Religionid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Intelligenceid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
