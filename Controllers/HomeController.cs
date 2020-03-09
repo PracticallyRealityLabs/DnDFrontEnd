@@ -21,7 +21,7 @@ namespace DnDFrontEnd.Controllers
         public IActionResult Index()
         {
 
-            return RedirectToAction("Index", "Campaigns");
+            return View();
         }
 
         public IActionResult Privacy()

@@ -1,8 +1,22 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the DnD Campaign Manager</h1>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <p>Welcome @User.Identity.Name!</p>
+            <p> Click the button to continue to your Campaigns </p>
+            <button type="button"> To Campaigns </button>
+        }
+        else
+        {
+            <p>Please log in to continue.</p>
+        }
+    </div>
