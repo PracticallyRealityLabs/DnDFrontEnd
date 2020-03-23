@@ -16,5 +16,6 @@ namespace DnDFrontEnd.Models
 
         public virtual ICollection<PlayerCharacter> PlayerCharacter { get; set; }
         public virtual ICollection<UsersBelongToCampaign> UsersBelongToCampaign { get; set; }
+
     }
 }

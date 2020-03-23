@@ -48,6 +48,10 @@ namespace DnDFrontEnd.Controllers
         {
             return View();
         }
+        public IActionResult MyCampaigns()
+        {
+            return View();
+        }
 
         // POST: Campaigns/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

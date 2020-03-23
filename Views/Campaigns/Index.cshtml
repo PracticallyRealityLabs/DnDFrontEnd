@@ -13,6 +13,8 @@
     <thead>
         <tr>
             <th> @Html.DisplayNameFor(model => model.CampaignName)</th>
+            <th> @Html.DisplayNameFor(model => model.PlayerCharacter)</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -20,6 +22,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CampaignName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerCharacter)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.CampaignId">Edit</a> |
