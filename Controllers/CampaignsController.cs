@@ -50,6 +50,7 @@ namespace DnDFrontEnd.Controllers
         }
         public IActionResult MyCampaigns()
         {
+            
             return View();
         }
 

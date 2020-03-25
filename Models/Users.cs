@@ -12,8 +12,8 @@ namespace DnDFrontEnd.Models
         }
 
         public int UsersId { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPassword { get; set; }
+        public string UserName { get; set; }
+        public string UsersEmail { get; set; }
 
         public virtual ICollection<PlayerCharacter> PlayerCharacter { get; set; }
         public virtual ICollection<UsersBelongToCampaign> UsersBelongToCampaign { get; set; }

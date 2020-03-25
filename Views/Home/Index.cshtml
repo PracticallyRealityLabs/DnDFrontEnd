@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-
+@using DnDFrontEnd.Models
 
 @{
     ViewData["Title"] = "Home Page";
@@ -11,9 +11,11 @@
         <h1 class="display-4">Welcome to the DnD Campaign Manager</h1>
         @if (SignInManager.IsSignedIn(User))
         {
+
             <p>Welcome @User.Identity.Name!</p>
             <p> Click the button to continue to your Campaigns </p>
-            <button type="button" onclick="location.href ='https://localhost:44369/Campaigns/Index'"> To Campaigns </button>
+            <button type="button" onclick="location.href = 'https://localhost:44369/Users/Checker'"> Onward </button>
+
         }
         else
         {

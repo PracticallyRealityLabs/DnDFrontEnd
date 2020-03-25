@@ -54,13 +54,13 @@ namespace DnDFrontEnd.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsersId,UserEmail,UserPassword")] Users users)
+        public async Task<IActionResult> Create([Bind("UsersId,UserName,UsersEmail")] Users users)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(users);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Checker));
             }
             return View(users);
         }
@@ -86,7 +86,7 @@ namespace DnDFrontEnd.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UsersId,UserEmail,UserPassword")] Users users)
+        public async Task<IActionResult> Edit(int id, [Bind("UsersId,UserName,UsersEmail")] Users users)
         {
             if (id != users.UsersId)
             {
@@ -149,5 +149,12 @@ namespace DnDFrontEnd.Controllers
         {
             return _context.Users.Any(e => e.UsersId == id);
         }
+        public async Task<IActionResult> Checker()
+        {
+            return View(await _context.Users.ToListAsync());
+        }
+
+
     }
+  
 }

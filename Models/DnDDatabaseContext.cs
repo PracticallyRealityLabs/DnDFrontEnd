@@ -686,17 +686,13 @@ namespace DnDFrontEnd.Models
 
                 entity.Property(e => e.UsersId).HasColumnName("userID");
 
-                entity.Property(e => e.UserEmail)
+                entity.Property(e => e.UserName)
                     .IsRequired()
                     .HasColumnName("userEmail")
                     .HasMaxLength(1)
                     .IsUnicode(false);
 
-                entity.Property(e => e.UserPassword)
-                    .IsRequired()
-                    .HasColumnName("userPassword")
-                    .HasMaxLength(1)
-                    .IsUnicode(false);
+                
             });
 
             modelBuilder.Entity<UsersBelongToCampaign>(entity =>

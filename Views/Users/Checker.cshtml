@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DnDFrontEnd.Models.Users>
+@{
+    ViewData["Title"] = "Checker";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool userAdded = false;
+    int userId;
+}
+@foreach (var item in Model)
+{
+    if (item.UsersEmail == @User.Identity.Name)
+    {
+        userId = item.UsersId;
+        <h1>You Have Been Identified As @item.UserName </h1>
+        userAdded = true;
+
+    }
+}
+
+@if (userAdded == true)
+{
+    <p>Continue To Your Party</p>
+    <button type="button" onclick="location.href = 'https://localhost:44369/MyInterfaces/UserCampaigns'"> Party Time </button>
+}
+else
+{
+<h1>You Are Nameless. This Cannot Be! </h1>
+<p>Venture Onward To Gain a Name</p>
+<button type="button" onclick="location.href = 'https://localhost:44369/Users/Create'"> Name Me! </button>
+}

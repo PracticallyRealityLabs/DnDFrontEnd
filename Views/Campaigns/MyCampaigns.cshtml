@@ -1,6 +1,6 @@
 ﻿@using DnDFrontEnd.Data;
+@using DnDFrontEnd.Models;
 @model DnDFrontEnd.Models.Campaign
-
 
 @{
     ViewData["Title"] = "MyCampaign";
@@ -10,14 +10,14 @@
 <div>
     <table class="table">
         <thead>
-          <!-- <tr>
+            <tr>
                 if (Campaign.)
                 {
 
-                    <th> Html.DisplayNameFor(model => model.CampaignName) </th>
-                }
+                <th> Html.DisplayNameFor(model => model.CampaignName) </th>
+                <th>Html.DisplayNameFor(DndFrontEnd.Models.Users.UserName)</th>                }
             </tr>
-              -->
+
         </thead>
         <tbody>
         </tbody>

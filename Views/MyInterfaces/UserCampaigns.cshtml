@@ -1,0 +1,78 @@
+﻿
+@using Microsoft.AspNetCore.SignalR
+@model IEnumerable<DnDFrontEnd.ViewModels.UserCampaignViewModel>;
+@{
+    ViewData["Title"] = "UserCampaigns";
+    int userId;
+    int? campaignId;
+}
+@*
+    @foreach (var item in Model)
+    {
+        if (item.Users.UsersEmail == @User.Identity.Name)
+        {
+            userId = item.Users.UsersId;
+*@
+<h1> @User.Identity.Name "here are your Campaigns</h1>
+<p>
+<a asp-action="CreateCampaign">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign.CampaignName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsersBelongToCampaign.Role)
+            </th>
+        </tr>
+    </thead>
+    @*<tbody>
+
+            @foreach (var topic in Model)
+            {
+                if (userId == topic.UsersBelongToCampaign.UserId)
+                {
+                    campaignId = topic.UsersBelongToCampaign.CampaignId;
+                    <tr>
+                        @foreach (var name in Model)
+                        {
+
+                            if (campaignId == name.Campaign.CampaignId)
+                            {
+                                <td>
+                                    @Html.DisplayFor(modelItem => name.Campaign.CampaignName)
+                                </td>
+                            }
+                        }
+
+                        @if (topic.UsersBelongToCampaign.Role == true)
+                        {
+                            <td>
+                                DM
+                            </td>
+
+                        }
+                        else
+                        {
+                            <td>
+                                Player
+                            </td>
+                        }
+                    </tr>
+                }
+            }
+        </tbody>*@
+</table>
+
+<p>Example DM Page</p>
+<button type="button" onclick="location.href = 'https://localhost:44369/MyInterfaces/DmPage'"> DM Page </button>
+<p>Example User Page</p>
+<button type="button" onclick="location.href = 'https://localhost:44369/MyInterfaces/PlayerSheet'"> Player Page </button>
+
+@*
+        }
+    }
+*@
+

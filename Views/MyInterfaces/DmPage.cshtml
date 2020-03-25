@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DnDFrontEnd.ViewModels.DmSheetViewModel>;
+@{
+        ViewData["Title"] = "DmPage";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<h1>DmPage</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Users.UserName)
+        </th>
+        
+        <th></th>
+    </tr>
+    </thead>
+    @*
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users.UserName)
+            </td>
+        </tr>
+    }
+    </tbody>
+    *@
+</table>
+<div>
+    <p>Click Here To View Items</p>
+    <button type="button" onclick="location.href = 'https://localhost:44369/Items/Index'"> Items </button>
+</div>
+<div>
+    <p>Click Here To View Spells</p>
+    <button type="button" onclick="location.href = 'https://localhost:44369/Spells/Index'"> Spells </button>
+</div>
+
